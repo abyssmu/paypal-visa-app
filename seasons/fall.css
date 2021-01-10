@@ -1,5 +1,6 @@
 body {
 	background: #222;
+	overflow: hidden;
 }
 
 /* leaf animations */
@@ -195,7 +196,7 @@ body {
 	}
 
 	100% {
-		-webkit-transform: translate3d(-10vh, 90vh, 0) rotate(90deg);
+		-webkit-transform: translate3d(-10vh, 100vh, 0) rotate(90deg);
 		opacity: 0;
 	}
 }
@@ -206,7 +207,7 @@ body {
 	}
 
 	100% {
-		-webkit-transform: translate3d(-20vh, 90vh, 0) rotate(-70deg);
+		-webkit-transform: translate3d(-20vh, 100vh, 0) rotate(-70deg);
 		opacity: 0;
 	}
 }
@@ -217,7 +218,7 @@ body {
 	}
 
 	100% {
-		-webkit-transform: translate3d(-15vh, 90vh, 0) rotate(0deg);
+		-webkit-transform: translate3d(-15vh, 100vh, 0) rotate(0deg);
 		opacity: 0;
 	}
 }
