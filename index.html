@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="index.css">
+		<link id="seasonStyle" rel="stylesheet" href="">
 	</head>
-	<body>
-		<form>
-			<!-- <div class="cardNumber">
-				<input type="number" name="cardNum">
-			</div> -->
-			<div class="balance">
-				<input type="number" name="balance">
+	<body onload="loadBackground()">
+		<div class="windowContainer">
+			<div id="season"></div>
+		</div>
+		<div class="container">
+			<div class="step">
+				<h1>Step 1</h1>
 			</div>
-		</form>
+			<div class="next">
+				<button>Prev</button>
+				<button>Help</button>
+				<button>Next</button>
+			</div>
+		</div>
 	</body>
+
+	<script language="javascript">
+		async function fetchHtmlAsText(url)
+		{
+			return await (await fetch(url)).text();
+		}
+
+		async function loadBackground()
+		{
+			var season = "fall"
+			var elem = document.getElementById("season");
+			elem.innerHTML = await fetchHtmlAsText("seasons/" + season + ".html");
+
+			var elemStyle = document.getElementById("seasonStyle");
+			elemStyle.href = "seasons/" + season + ".css";
+		}
+	</script>
 </html>
